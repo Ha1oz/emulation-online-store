@@ -11,8 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/store/order")
+@RequestMapping("${spring.application.context.path}/order")
 public class StoreController {
+
     @Autowired
     private StoreService storeService;
     @GetMapping("/add")
